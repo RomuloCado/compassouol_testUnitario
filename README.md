@@ -40,7 +40,7 @@ Para realizar os testes da aplicação pode ser utilizado o Postman ou a própri
 
 ```bash
     # Clonar o repositório
-    $ git clone https://github.com/RomuloCado/compassouol_projetos
+    $ git clone https://github.com/RomuloCado/compassouol
     # Entrar no diretório
     $ cd compassouol_projetos
     # Instalar as dependências
