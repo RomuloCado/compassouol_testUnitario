@@ -43,10 +43,6 @@ Para realizar os testes da aplicação pode ser utilizado o Postman ou a própri
     $ git clone https://github.com/RomuloCado/compassouol
     # Entrar no diretório
     $ cd compassouol_projetos
-    # Instalar as dependências
-    $ yarn install
-    # Iniciar o projeto
-    $ yarn start
 ```
 
 ---
