@@ -1,6 +1,6 @@
 <h1 align="center"> Compassouol API de Produtos em Estoque<h1>
 
-# Indice
+# Índice
 
 - [Sobre](#-sobre)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -30,7 +30,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ---
 
-## Testes
+##Testes
 
 Para realizar os testes da aplicação pode ser utilizado o Postman ou a própria documentação Swagger do projeto (http://localhost:8080/swagger-ui.html).
 
