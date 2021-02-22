@@ -9,8 +9,8 @@
 
 ## 🔖&nbsp; Sobre
 
-O projeto **Produtos em Estoque** é uma API REST desenvolvida na linguagem Java, com o framework Spring Boot, tem o intuito de manipular no banco de dados a lista produtos 
-relacionados com seu estoque, permite o cadastro, busca, atualização, e deletar.
+O projeto **Produtos em Estoque** é uma API REST desenvolvida na linguagem Java, com o framework Spring Boot, tem o intuito de manipular no banco de dados a lista de produtos 
+relacionados com seu estoque, contendo a descrição do produto, o valor, e sua quantidade em estoque. Permite o cadastro, busca, atualização, e exclusão.
 Através dos métodos REST:
 -GET
 -POST
@@ -42,7 +42,7 @@ Para realizar os testes da aplicação pode ser utilizado o Postman ou a própri
     # Clonar o repositório
     $ git clone https://github.com/RomuloCado/compassouol
     # Entrar no diretório
-    $ cd compassouol_projetos
+    $ cd compassouol
 ```
 
 ---
