@@ -4,7 +4,7 @@
 
 - [Sobre](#-sobre)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Testes](https://github.com/RomuloCado/compassouol/blob/master/README.md#testes)
+- [Testes](https://github.com/RomuloCado/compassouol#testes)
 - [Como baixar o projeto](#-como-baixar-o-projeto)
 
 ## 🔖&nbsp; Sobre
