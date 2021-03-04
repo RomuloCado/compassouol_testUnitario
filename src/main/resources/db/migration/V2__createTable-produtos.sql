@@ -5,4 +5,4 @@ CREATE TABLE produtos (
   estoque_id bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`estoque_id`) REFERENCES estoque (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) 

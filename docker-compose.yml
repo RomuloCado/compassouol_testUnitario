@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:   
+     db:
+       image: mysql:5.7
+       ports:
+          - "3306:3306"
+       restart: always
+       environment:
+           MYSQL_DATABASE: lista_produtos
+           MYSQL_USER: adm
+           MYSQL_PASSWORD: adm123
+           MYSQL_ROOT_PASSWORD: root
+       networks:
+         - backend
+       healthcheck:
+         test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
+         interval: 2s
+         timeout: 20s
+         retries: 10   
+         
+     produtos:
+        build:
+            dockerfile: ./Dockerfile
+            context: ./
+        container_name: produtos
+        ports:
+            - "8080:8080"
+        restart: always
+        depends_on:
+             db:
+                condition: service_healthy
+        environment:
+               SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/lista_produtos?&useSSL=false&serverTimezone=UTC&useLegacyDatetimecode=false
+               SPRING_DATASOURCE_USERNAME: adm
+               SPRING_DATASOURCE_PASSWORD: adm123
+        networks: 
+            - backend
+
+networks: 
+    backend:
+    
