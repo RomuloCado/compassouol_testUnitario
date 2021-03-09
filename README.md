@@ -46,7 +46,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ## Testes
 
-Para realizar os testes unitários da aplicação, **verifique as configurações do banco de dados MySQL e configure de acordo com banco de dados da sua máquina**, após isso basta entrar no diretório src/test/java/com/compassouol/produtos/ProdutosReposioryTest, e rodar jUnit Test.
+Para realizar os testes unitários da aplicação, **verifique as configurações do banco de dados MySQL e configure de acordo com o banco de dados da sua máquina**, após isso basta entrar no diretório src/test/java/com/compassouol/produtos/ProdutosReposioryTest, e rodar jUnit Test.
 
 Para realizar os testes da aplicação pode ser utilizado o Postman ou a própria documentação Swagger do projeto (http://localhost:8080/swagger-ui.html).
 
