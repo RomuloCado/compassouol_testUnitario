@@ -8,7 +8,7 @@
 - [Como baixar o projeto](#-como-baixar-o-projeto)
 
 ## 🔖&nbsp; Sobre
-A API foi implimentada com testes unitários. Eles são realizados para verificar se a lógica ou regra de negócio de um método da API ou do Sistema está funcionando corretamente, se o seu retorno está sendo o esperado da funcionalidade. A grande vantagem de utilizar testes unitários é a possibilidade de não depender do funcionamento total da API, as ferramentas permitem isolar aquele método ou função, e rodar a sua lógica sem a necessidade de tudo na API estar funcionando, além de serem baratos e rápidos que possuem a vantagem de serem criados durante a fase de desenvolvimento.
+A API Produtos em Estoque foi implimentada com testes unitários. Eles são realizados para verificar se a lógica ou regra de negócio de um método da API ou do Sistema está funcionando corretamente, se o seu retorno está sendo o esperado da funcionalidade. A grande vantagem de utilizar testes unitários é a possibilidade de não depender do funcionamento total da API, as ferramentas permitem isolar aquele método ou função, e rodar a sua lógica sem a necessidade de tudo na API estar funcionando, além de serem baratos e rápidos que possuem a vantagem de serem criados durante a fase de desenvolvimento.
 
 Ter uma boa cobertura de testes nas funcionalidades da API é essencial para garantir a qualidade do software. Durante o build da aplicação são rodados os testes que foram implementados, e se algum dos testes apresentar falha, o deploy da aplicação não será realizado.
 
