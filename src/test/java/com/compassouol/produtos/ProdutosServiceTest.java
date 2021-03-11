@@ -18,7 +18,7 @@ import com.compassouol.produtos.repository.EstoqueRepository;
 import com.compassouol.produtos.repository.ProdutosRepository;
 import com.compassouol.produtos.service.ProdutosService;
 
-public class ProdutosRepositoryTest {
+public class ProdutosServiceTest {
  
 
 	@Mock
