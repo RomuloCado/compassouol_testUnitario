@@ -52,7 +52,7 @@ Para realizar os testes da aplicação pode ser utilizado o Postman ou a própri
 
 ```bash
     # Clonar o repositório
-    $ git clone https://github.com/RomuloCado/compassouol_testUnitario
+    $ git clone -b TesteCertoComService https://github.com/RomuloCado/compassouol_testUnitario
     # Entrar no diretório
     $ cd compassouol_testUnitario
 ```
