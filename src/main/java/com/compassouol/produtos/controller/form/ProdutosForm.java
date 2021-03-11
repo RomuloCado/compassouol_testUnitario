@@ -1,14 +1,13 @@
 package com.compassouol.produtos.controller.form;
 
 import java.math.BigDecimal;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import com.compassouol.produtos.models.Estoque;
 import com.compassouol.produtos.models.Produtos;
-import com.compassouol.produtos.repository.EstoqueRepository;
-import com.compassouol.produtos.repository.ProdutosRepository;
 
 /**
  *a classe define quais parametros serão exigidos e validados para realizar mudanças
@@ -22,6 +21,16 @@ public class ProdutosForm {
 	private BigDecimal valor;
 	@NotNull @Min(1)
 	private Integer quantidade;
+	
+	public ProdutosForm() {
+		
+	}
+	
+	public ProdutosForm(Produtos produto) {
+		this.descricao = produto.getDescricao();
+		this.valor = produto.getValor();
+		this.quantidade = produto.getEstoque().getQuantidade();
+	}
 	
 	public String getDescricao() {
 		return descricao;
@@ -52,14 +61,5 @@ public class ProdutosForm {
 		return new Produtos(descricao, valor, estoque);
 	}
 
-	public Produtos atualizar(Long id, ProdutosRepository produtosRepository, EstoqueRepository estoqueRepository) {
-		Produtos produto = produtosRepository.getOne(id);
-		Estoque estoque = estoqueRepository.getOne(id);
-		estoque.setQuantidade(this.quantidade);
-		produto.setDescricao(this.descricao);
-		produto.setValor(this.valor);
-		produto.setEstoque(estoque);
-		return produto;
-	}
 	
 }

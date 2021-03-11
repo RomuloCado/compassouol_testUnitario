@@ -21,6 +21,7 @@ import com.compassouol.produtos.controller.form.ProdutosForm;
 import com.compassouol.produtos.models.Produtos;
 import com.compassouol.produtos.repository.EstoqueRepository;
 import com.compassouol.produtos.repository.ProdutosRepository;
+import com.compassouol.produtos.service.ProdutosService;
 
 
 @RestController
@@ -33,6 +34,9 @@ public class ProdutosController {
 	@Autowired
 	private EstoqueRepository estoqueRepository;
 	
+	@Autowired
+	private ProdutosService service;
+	
 	/**
 	  *O método listaTodos como padrão gera um lista com todos
 	  *os produtos cadastrados, e também recebe como opcao de parametro
@@ -41,15 +45,15 @@ public class ProdutosController {
 	@GetMapping
 	public List<ProdutosDto> listaTodos(String descricao){
 		
-		if(descricao == null) {
-			List<Produtos> produtos = produtosRepository.findAll();
+		if (descricao == null) {
+			List<Produtos> produtos = service.retornaTodosProdutos();
 			return ProdutosDto.converter(produtos);
-		}else {
-			List<Produtos> produtos = produtosRepository.findByDescricao(descricao);
-			return ProdutosDto.converter(produtos);
-		}		
-	}
-	
+		} else {
+			 List<Produtos> produtos = service.retornaProdutoPelaDescricao(descricao);
+			 return ProdutosDto.converter(produtos);
+		}
+	}		
+		
 	/**
 	  *O método cadastraProdutos recebe os dados de formulário através de uma requisição do Corpo,
 	  *valida essa requisição, se algo vir fora do padrao da classe produtosForm será lançado um erro
@@ -91,7 +95,7 @@ public class ProdutosController {
 	public ResponseEntity<ProdutosDto> atualizarProdutos(@PathVariable Long id, @RequestBody @Valid ProdutosForm produtosForm){
 		Optional<Produtos> produtos = produtosRepository.findById(id);
 		if(produtos.isPresent()) {
-			Produtos produto = produtosForm.atualizar(id, produtosRepository, estoqueRepository);
+			Produtos produto = service.atualizaProduto(id, produtosForm);
 			return ResponseEntity.ok(new ProdutosDto(produto));
 		}	
 		return ResponseEntity.notFound().build();
