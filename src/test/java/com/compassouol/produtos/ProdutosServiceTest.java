@@ -39,19 +39,19 @@ public class ProdutosServiceTest {
 	@Test
 	public void atualizaProduto() {
 
-		Produtos produto = exemploProduto();
+	    	 Produtos produto = exemploProduto();
 		
-	    when(repositoryProdutos.getOne(produto.getId())).thenReturn(produto);
-	    when(repositoryEstoque.getOne(produto.getEstoque().getId())).thenReturn(produto.getEstoque());
+	    	 when(repositoryProdutos.getOne(produto.getId())).thenReturn(produto);
+	   	 when(repositoryEstoque.getOne(produto.getEstoque().getId())).thenReturn(produto.getEstoque());
 	    
-	    ProdutosForm produtoAtualizado = new ProdutosForm(exemploProduto2());
+	   	 ProdutosForm produtoAtualizado = new ProdutosForm(exemploProduto2());
 	    
-	    produtosService.atualizaProduto(produto.getId(), produtoAtualizado);
+	   	 produtosService.atualizaProduto(produto.getId(), produtoAtualizado);
 	    
-	    // Apartir daqui o produto foi atualizado para o seundo exemplo 
-	    assertThat(produto.getDescricao()).isEqualTo("Playstation 4");
-		assertThat(produto.getValor()).isEqualTo(new BigDecimal(2500));
-		assertThat(produto.getEstoque().getQuantidade()).isEqualTo(50);		
+	    	 // Apartir daqui o produto foi atualizado para o segundo exemplo 
+	    	 assertThat(produto.getDescricao()).isEqualTo("Playstation 4");
+		 assertThat(produto.getValor()).isEqualTo(new BigDecimal(2500));
+		 assertThat(produto.getEstoque().getQuantidade()).isEqualTo(50);		
 
 	}
 
